@@ -6,18 +6,15 @@ import {
    Routes,
 } from 'discord.js';
 import { REST } from '@discordjs/rest';
-import pingCommand, { pingHandler } from './commands/ping.js';
+import pingCommand, { pingHandler } from './commands/cabnit/ping.js';
 import refreshCommand, { refreshHandler } from './commands/cabnit/refresh.js';
-import joinCommand, { joinHandler } from './commands/citizen/join.js';
-import { Database } from './database.js';
+// import { Database } from './database.js';
 
 config();
 
 const TOKEN = process.env.BOT_TOKEN;
 const CLIENT_ID = process.env.BOT_CLIENT_ID;
 export const GUILD_ID = process.env.DEFAULT_GUILD_ID;
-
-export const db = new Database();
 
 export const client = new Client({
    intents: [
@@ -71,9 +68,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
       case 'ping':
          return pingHandler(interaction);
 
-      case 'join':
-         return joinHandler(interaction);
-
       case 'refresh':
          return refreshHandler(interaction);
 
@@ -88,7 +82,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
 const Main = async () => {
    const commands = [
       pingCommand,
-      joinCommand,
       refreshCommand,
    ];
 
