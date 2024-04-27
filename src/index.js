@@ -6,9 +6,9 @@ import {
    Routes,
 } from 'discord.js';
 import { REST } from '@discordjs/rest';
-import pingCommand, { pingHandler } from './commands/ping.js';
-import refreshCommand, { refreshHandler } from './commands/cabnit/refresh.js';
-import joinCommand, { joinHandler } from './commands/citizen/join.js';
+import pingCommand, { pingHandler } from './commands/cabnit/ping.js';
+import refreshCommand, { refreshHandler } from './commands/cabnit/cabnit/refresh.js';
+import joinCommand, { joinHandler } from './commands/cabnit/citizen/join.js';
 import { Database } from './database.js';
 
 config();
