@@ -6,9 +6,8 @@ import {
    Routes,
 } from 'discord.js';
 import { REST } from '@discordjs/rest';
-import pingCommand, { pingHandler } from './commands/cabnit/ping.js';
-import refreshCommand, { refreshHandler } from './commands/cabnit/refresh.js';
-// import { Database } from './database.js';
+import pingCommand, { pingHandler } from './commands/cabnit/ping.js'
+import refreshCommand, { refreshHandler } from './commands/cabnit/refresh.js
 
 config();
 
@@ -49,10 +48,9 @@ client.on('messageCreate', async (message) => {
    }
 
    const responses = [
-      'Shh! :deaf_person::shushing_face:',
-      'Hey there! You mentioned me.',
-      '我喜欢冰淇淋',
-      'https://tenor.com/view/ash-ashh-baby-ia-gif-16729153814109504694',
+      'Glory to  the UCD!',
+      'Glory to  the free world!',
+      'Glory to  the democracy!',
    ]
 
    await message.reply(responses[Math.floor(Math.random() * responses.length)]);
