@@ -7,7 +7,7 @@ import {
 } from 'discord.js';
 import { REST } from '@discordjs/rest';
 import pingCommand, { pingHandler } from './commands/cabnit/ping.js'
-import refreshCommand, { refreshHandler } from './commands/cabnit/refresh.js
+import refreshCommand, { refreshHandler } from './commands/cabnit/refresh.js';
 
 config();
 
@@ -48,9 +48,9 @@ client.on('messageCreate', async (message) => {
    }
 
    const responses = [
-      'Glory to  the UCD!',
-      'Glory to  the free world!',
-      'Glory to  the democracy!',
+      'Glory to  the UCD.',
+      'Glory to  the free world.',
+      'Glory to  the democracy.',
    ]
 
    await message.reply(responses[Math.floor(Math.random() * responses.length)]);
