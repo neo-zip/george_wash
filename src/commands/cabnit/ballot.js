@@ -4,6 +4,8 @@ import { v4 } from 'uuid';
 
 export const ballotHandler = async (interaction) => {
    database.set(v4(), {
+      date: new Date(),
+      endDate: new Date(),
 
    })
 
